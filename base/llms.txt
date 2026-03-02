@@ -1,0 +1,38 @@
+# Aramiworks
+
+Aramiworks (주식회사 아람이) is an AI-first company.
+
+## What we build
+
+- AI agent automation systems using OpenClaw
+- Internal tooling for productivity and workflow automation
+- AI-native development infrastructure
+
+## Tech stack
+
+- TypeScript/Node.js
+- OpenClaw agent framework
+- GitHub for all code (aramiworks org)
+- Linear for issue tracking
+- Slack for team communication
+
+## Development standards
+
+- Conventional Commits
+- PR-first workflow (no direct pushes)
+- AI context files in every repo (CLAUDE.md, .cursor/rules/, AGENTS.md)
+- Security-first: 1Password for secrets, minimal token scopes
+
+## Agent system
+
+Multiple specialized AI agents running on OpenClaw:
+- Arami 🌊: Main coordinator
+- Ops 🔧: Infrastructure & automation
+- Work 💼: Work tasks & scheduling
+- Life 🌿: Personal tasks
+- Projects 🚀: Project management
+
+## Repos
+
+- aramiworks/dotclaw: OpenClaw config & dotfiles
+- aramiworks/craft: AI context & development standards (this repo)

@@ -1,0 +1,40 @@
+---
+description: Aramiworks core coding standards — applies to all repos
+alwaysApply: true
+---
+
+# Aramiworks Core Standards
+
+## Language & Style
+
+- TypeScript strict mode; avoid `any`
+- Conventional Commits: `feat:`, `fix:`, `chore:`, `docs:`, `perf:`, `refactor:`
+- Korean comments OK for internal logic; English for public APIs/docs
+- pnpm for package management
+
+## Code Quality
+
+- Functions < 50 lines; files < 300 lines
+- Extract logic into named functions (no anonymous callback soup)
+- Zod for all external input validation
+- No `console.log` in production code — use structured logging
+
+## Git & PRs
+
+- Branch naming: `feature/xxx`, `fix/xxx`, `chore/xxx`, `docs/xxx`
+- PR title = Conventional Commit format
+- Link Linear issue in PR description when relevant
+- No direct push to main/master
+
+## Security
+
+- No hardcoded secrets — use env vars or 1Password
+- Validate all user/external inputs
+- Principle of least privilege for API tokens
+
+## AI Context
+
+When using AI tools in this repo:
+- Check `CLAUDE.md` for project context
+- Check `.cursor/rules/` for coding standards
+- Check `AGENTS.md` for agent behavior rules

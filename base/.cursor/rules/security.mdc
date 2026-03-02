@@ -1,0 +1,36 @@
+---
+description: Security guardrails for all Aramiworks repos
+alwaysApply: true
+---
+
+# Security Rules
+
+## Secrets Management
+
+- NEVER commit API keys, tokens, passwords, or secrets to git
+- Use environment variables or 1Password CLI (`op run`)
+- If you see a secret in code: flag it immediately, do not proceed
+
+## Input Validation
+
+- Validate ALL external inputs with Zod before processing
+- Sanitize user inputs before database queries
+- Use parameterized queries; no string interpolation in SQL
+
+## Dependencies
+
+- Keep dependencies up to date (Dependabot handles this)
+- Review new dependencies for supply chain risks
+- Pin GitHub Action versions to SHA hashes (not tags)
+
+## API Security
+
+- Minimum required scopes for all API tokens
+- Rotate tokens on suspected compromise
+- Log access patterns for sensitive operations
+
+## Code Review
+
+- Security-sensitive changes need explicit review
+- CODEOWNERS enforces reviewer requirements
+- No force-push to protected branches
